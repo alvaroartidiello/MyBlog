@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button (click)="sidenav.toggle()" mat-icon-button>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <h1>Welcome to my blog</h1>
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container class="sidenav-container">
+   <mat-sidenav #sidenav opened mode="side">
+      <mat-nav-list>
+        <mat-list-item>
+            <button mat-button routerLink="/home"><mat-icon>home</mat-icon> Home</button>
+        </mat-list-item>
+        <mat-list-item>
+            <button mat-button routerLink="/posts"><mat-icon>edit_document</mat-icon> Posts</button>
+        </mat-list-item>
+        <mat-list-item>
+            <button mat-button routerLink="/about"><mat-icon>help</mat-icon> About</button>
+        </mat-list-item>
+    </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div style ="height: 88vh;">
+        <router-outlet> 
+        </router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

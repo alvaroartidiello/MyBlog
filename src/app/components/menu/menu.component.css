@@ -1,0 +1,4 @@
+.mat-drawer-content {
+    height: calc(100vh - 64px); /* 64px es la altura de la barra de herramientas */
+    padding: 16px; /* Opcional, agrega un relleno al contenido */
+  }
